@@ -1,13 +1,10 @@
     <?php
-        if(isset($_POST['hitung'])){
-            $nama     = $_POST['nama'];
-            $harga    = $_POST['harga'];
-            $qty      = $_POST['qty'];
-            $total    = $harga * $qty;
-
-            echo '$total';
-        }
-
+     if(isset($_POST['hitung'])){
+        $nama     = $_POST['nama'];
+        $harga    = $_POST['harga'];
+        $qty      = $_POST['qty'];
+        $total    = $harga * $qty;
+     }
     ?>
 
 <html>
@@ -16,6 +13,12 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style type="text/css">
+        body {
+            background-image: linear-gradient( 109.6deg,  rgba(62,161,219,1) 11.2%, rgba(93,52,236,1) 100.2% );
+        }
+    </style>
 
 </head>
 <body>
@@ -58,6 +61,14 @@
             </form>
         </div>
     </div>
+
+    <!-- Javascript -->
+    <script type="text/javascript">
+        var variabelJS = '<?php echo $total; ?>';
+        function alertVarJS() {
+            alert(variabelJS);
+        };
+    </script>
 
 </body>
 </html>
